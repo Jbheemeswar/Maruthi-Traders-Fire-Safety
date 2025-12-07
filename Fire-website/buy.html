@@ -1,0 +1,353 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #010101; /* Light green background */
+        }
+   .container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #fb4723;
+    padding: 60px 40px;
+    border-radius: 8px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}   
+     h2 {
+            text-align: center;
+            margin-bottom: 0px;
+            color: rgba(0, 0, 0, 0.851);
+            font-family:'Orbitron';
+            font-size: 28px;
+            margin-top: 5px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            background:  #fb4723;
+            
+        }
+        label {
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 5px solid #fbff00;
+            border-radius: 1px;
+            font-size: 16px;
+            
+        }
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+        button {
+            background-color:#01a71f;
+            color: rgb(1, 18, 83);
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color:  #f2c600;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('https://png.pngtree.com/background/20210711/original/pngtree-fire-safety-poster-background-picture-image_1119340.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+        p {
+            color: #c4d4c7;
+           text-align: center;     
+        
+        }
+       label {
+       
+        color: #0a0a0a;
+        font-size: 20px;
+       }
+
+       .footer  {
+            background: #cd790b;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            font-size: 12px;
+            bottom:0;
+            left:0;
+            width:100%;
+            z-index:1000;
+            
+            
+        }
+       
+        .p1 .p2 .p3 .p4 {
+            color:#d4cbcb;
+        }
+        
+        .p1 {
+           
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            font-size: 16px;
+            left:0;
+            width:100%;
+            z-index:1000;
+            bottom: 140px;
+
+        }
+        .p2 {
+          
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            font-size: 16px;
+            bottom:115px;
+            left:0;
+            width:100%;
+            z-index:1000;
+            margin-top: -100px;
+
+        }
+        .p3 {
+          
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            font-size: 16px;
+            bottom:90px;
+            left:0;
+            width:100%;
+            z-index:1000;
+            margin-top: -100px;
+
+        }
+        .p4 {
+          
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            font-size: 16px;
+            bottom:60px;
+            left:0;
+            width:100%;
+            z-index:1000;
+            margin-top: -100px;
+
+        }
+      .tex {
+    font-weight: 800;
+    cursor: pointer;
+    color: rgb(255, 16, 16);
+    text-align: center;
+     font-size: 4vw;/* Responsive font size */
+    display: block; 
+    font-family: 	'Orbitron', sans-serif;
+      }
+
+.tex:hover {
+    transform: scale(1.0);
+    color: rgb(37, 34, 30);
+}
+
+@media (min-width: 768px) {
+    .tex {
+        font-size: 24px; /* For tablets and desktops */
+    }
+}
+
+         .img {
+      margin-left: 10px;
+      margin-top: 10px;
+      height: 50px;
+      width:50px;
+      border-radius:25px;
+      margin-bottom: 30px;
+     
+    }
+        body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    select, button {
+      padding: 10px;
+      margin: 10px 5px 10px 0;
+      font-size: 16px;
+    }
+    .add-btn {
+      background-color: #eeff59;
+      color: rgb(4, 4, 4);
+      border: none;
+      cursor: pointer;
+    }
+    .add-btn:hover {
+      background-color: #007f16;
+    }
+    .reset-btn {
+        background-color: rgb(232, 152, 61);
+      color: rgb(1, 0, 0);
+      border: none;
+      cursor: pointer;
+    }
+    .reset-btn:hover {
+      background-color: #c01300;
+    }
+    #result {
+      margin-top: 20px;
+    }
+      .contact-info p {
+      margin-bottom: 10px;
+    }
+.WhatsApp:hover {
+    background-color: #25D366; /* WhatsApp green */
+    color: white; /* optional: change text color for contrast */
+    cursor: pointer; /* optional: change cursor to pointer on hover */
+}
+    
+    </style>
+</head>
+<body>
+    <img class="img" src="logo-img.png">
+  <div>
+    <a href="#" class="tex">Maruthi traders fire & safety</a>
+</div>
+     <div class="container">
+        <form method="POST" action="https://api.web3forms.com/submit">   
+        <h2>Order Fire Cylinders – Quick Inquiry</h2>   
+      <input type="hidden" name="access_key" value="606ca41f-af07-4ba8-bfd1-aeff9f0abb72">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name"  placeholder="Your Name" style="background-color: #d3e9f3;" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" style="background-color:  #d3e9f3;" required>
+
+            <label for="Call">Mobile Number:</label>
+            <input type="text" id="name" name="name" placeholder="Your Mobile Number" style="background-color:  #d3e9f3;" required>
+     <label for="address">📍 Address:</label>
+<textarea id="address" name="address" placeholder="Delivery Address" style="background-color: #d3e9f3;" required></textarea>
+
+      <!-- Type of Cylinder -->  
+<input type="hidden" id="selectedCylindersInput" name="selectedCylinders">
+     <label style="font-size: 20px;
+     color:#040504;
+     font-weight: bold;
+     " for="type">Type of Cylinder:</label>
+    <select id="type" name="type" style="background-color: #d3e9f3;"> 
+      <option value="" hidden>Select Type</option>
+      <option value="ABC (1kg)">ABC (1kg)</option>
+      <option value="ABC (2kg)">ABC (2kg)</option>
+      <option value="CO₂ (2kg)">CO₂ (2kg)</option>
+      <option value="Fire Ball">Fire Ball</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <button type="button" class="add-btn" onclick="addCylinder()">➕ Add Cylinder</button>
+    <button type="button" class="reset-btn" onclick="resetCylinders()">🔄 Reset</button>
+
+    <!-- Hidden input to send selected cylinders -->
+    <input type="hidden" name="selected_cylinders" id="selectedCylindersInput">
+   <div id="result"></div>
+
+    <!-- Number of Cylinders -->
+    <label for="quantity">Number of Cylinders:</label>
+    <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter Quantity" style="background-color: #d3e9f3;" required>
+
+    <!-- Optional Message -->
+    <label for="message">Message: Fill Details of items you have Selected type of cylinder:No of cylinders:</label>
+    <textarea id="message" name="message" placeholder="Fill Details of items you have Selected 
+     Type of cylinder: 
+     No of cylinders:" style="font-style: italic; background-color: #d3e9f3;"></textarea>
+
+      <p class="WhatsApp">
+    <strong style="color:white;">💬 WhatsApp:</strong>
+    <a href="https://wa.me/919573201047" target="_blank" style="color:rgb(55, 6, 255); text-decoration:underline;">
+      Chat on WhatsApp
+    </a>
+  </p>
+
+    <!-- Submit Button --> 
+   <button type="submit">🛒 Place Order</button>
+  <!-- Your existing content -->
+ 
+   </form>
+    </div>        
+  </div>
+   <div class="footer">
+        &copy; 2025 AI Summarizer. All Rights Reserved. | Contact us at Mrfsrinivas@gmail.com | 
+    </div>
+
+   <!-- Geolocation Script -->
+<!-- Geolocation Script -->
+<script>
+  const selectedCylinders = [];
+
+  function addCylinder() {
+    const select = document.getElementById("type");
+    const selectedValue = select.value;
+
+    if (!selectedValue) {
+      alert("Please select a cylinder type.");
+      return;
+    }
+
+    selectedCylinders.push(selectedValue);
+    select.selectedIndex = 0; // reset dropdown
+    updateResult();
+  }
+
+  function resetCylinders() {
+    selectedCylinders.length = 0;
+    updateResult();
+  }
+
+ function updateResult() {
+  const resultDiv = document.getElementById("result");
+
+  if (selectedCylinders.length === 0) {
+    resultDiv.innerHTML = "<strong>No cylinders selected yet.</strong>";
+    document.getElementById("selectedCylindersInput").value = "";
+    const displayInput = document.getElementById("selectedCylindersDisplay");
+    if (displayInput) displayInput.placeholder = "No cylinders selected";
+    return;
+  }
+
+  let html = "<strong>Selected Cylinders:</strong><ul>";
+  selectedCylinders.forEach((cylinder, index) => {
+    html += `<li>${index + 1}. ${cylinder}</li>`;
+  });
+  html += "</ul>";
+
+  resultDiv.innerHTML = html;
+
+  // ✅ Correctly update the hidden input and display field here
+  document.getElementById("selectedCylindersInput").value = selectedCylinders.join(", ");
+
+  const displayInput = document.getElementById("selectedCylindersDisplay");
+  if (displayInput) {
+    displayInput.placeholder = selectedCylinders.join(", ") || "No cylinders selected";
+  }
+}
+</script>
+
+</body>
+</html>
+
+

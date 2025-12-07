@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login-Maruthi traders fire and safety</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    #bg-video {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(1.3);
+      z-index: 0;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: -1;
+    }
+
+    .login-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 400px;
+      background-color: rgba(255, 255, 255, 0.15);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      margin-top:30px;
+    }
+
+    .login-container img {
+      height: 50px;
+      margin-bottom: 15px;
+    }
+
+    .login-container h2 {
+      color: #ffcc00;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 25px;
+      margin-bottom: 15px;
+      padding: 12px 15px;
+      font-size: 1rem;
+    }
+
+    .btn-login {
+      width: 100%;
+      border-radius: 25px;
+      background-color: #ffcc00;
+      color: black;
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .btn-login:hover {
+      background-color: #e6b800;
+    }
+
+    .extra-links {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    .extra-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 576px) {
+      .login-container {
+        padding: 20px;
+      }
+      .login-container h2 {
+        font-size: 1.4rem;
+      }
+      .form-control {
+        font-size: 0.95rem;
+      }
+      .btn-login {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 992px) {
+      .login-container {
+        max-width: 450px;
+        padding: 35px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .login-container {
+        max-width: 500px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="Welcome Maruthi traders fire and safety.mp4" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="overlay"></div>
+
+  <!-- Login Form -->
+ <!-- Login Form -->
+<div class="login-container">
+  <h2>Login-Maruthi traders fire & safety</h2>
+  <form onsubmit="handleLogin(event)">
+    <input type="email" class="form-control" placeholder="Email Address" required>
+    <input type="password" class="form-control" placeholder="Password" required>
+    <button type="submit" class="btn btn-login">Login</button>
+  </form>
+
+  <div class="extra-links">
+    <p><a href="hp.html">Forgot Password?</a> | <a href="hp.html">Sign Up</a></p>
+  </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  function handleLogin(event) {
+    event.preventDefault(); // Prevent actual form submission
+    // You can add validation or authentication here
+    window.location.href = 'hp.html'; // Redirect to home page
+  }
+</script>
+
+
+
+</body>
+</html>

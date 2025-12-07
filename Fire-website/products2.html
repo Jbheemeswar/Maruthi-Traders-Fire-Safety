@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PRODUCTS-Maruthi traders fire & safety</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+
+    #cart-btn {
+      background-color: #ff4d4d;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .product {
+      background: white;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .product img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Crops image to fill */
+  border-radius: 8px;
+  display: block;
+}
+
+
+    .product h2 {
+      font-size: 20px;
+      margin: 10px 0 5px;
+    }
+
+    .product p {
+      margin: 4px 0;
+    }
+
+    .product button {
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      margin-top: 10px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    #cart {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      background: white;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      display: none;
+      flex-direction: column;
+      z-index: 100;
+    }
+
+    #cart h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    #cart ul {
+      list-style: none;
+      margin-bottom: 10px;
+    }
+
+    #cart ul li {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+    }
+
+    #cart-total {
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    #pay-btn, #close-cart {
+      margin-top: 10px;
+      padding: 8px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #pay-btn {
+      background-color: green;
+      color: white;
+    }
+
+    #close-cart {
+      background-color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 18px;
+      }
+
+      #cart {
+        width: 100%;
+      }
+    }
+    .logo {
+      margin-left: -10px;
+      height: 50px;
+      width:50px;
+      border-radius:25px;
+    }
+   /* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for headings */
+.header-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers horizontally */
+  text-align: center;
+}
+
+/* Heading Styles */
+h1 {
+  color: #961818;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: #ff4d4d;
+  font-size: 1.5rem;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+#reset-cart {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.purc {
+  text-align: center;
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 20px;
+  color: green;
+  background-color: #dff0d8; /* Light pastel green */
+  padding: 15px 25px;
+  margin: 30px auto;
+  width: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.purc:hover {
+  transform: scale(1.05);
+}
+
+
+
+.buy-btn {
+  border-radius: 5px;
+  border: 1px solid #a88734;
+  padding: 12px 24px;
+  background-color: #ffd814; /* Amazon yellow */
+  color: #111;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+  margin: 25px auto;
+  display: block;
+  width: fit-content;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: lightgreen;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.contact-button {
+  display: inline-block;
+  background-color: #c62828;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  text-align: center;
+  font-size: 18px;
+  min-width: 200px;
+}
+
+.contact-button:hover {
+  background-color: #a71d1d;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+     <img class="logo" src="logo-img.png" alt="Maruti Fire Safety Logo">
+    
+     <div class="header-container">
+  <h1>Welcome to Maruthi traders fire & safety</h1>
+  <h2>Protect your home and family</h2>
+</div>
+
+
+    <button id="cart-btn" onclick="toggleCart()">Cart (<span id="cart-count">0</span>)</button>
+  </header>
+
+  <!-- Products -->
+  <section class="products">
+    <div class="product">
+      <img src="https://www.jiomart.com/images/product/original/rvay9mutx4/voila-abc-powder-type-1kg-fire-extinguisher-for-vehicle-home-office-product-images-orvay9mutx4-p592223434-0-202206271048.jpg?im=Resize=(1000,1000)" alt="Fire Cylinder 1kg">
+      <h2>ABC Fire Cylinder 1kg</h2>
+      <p>Compact extinguisher for home & office</p>
+      <p>50%off</p>
+      <button onclick="addToCart('Fire Cylinder 1kg', 600)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://img.4imz.com/media/KLKMBRCH/upload/abc-powder-fire-extinguisher-suppliers-in-sikar-1641041535.jpg" alt="Fire Cylinder 2kg">
+      <h2>Fire Cylinder 2kg</h2>
+      <p>Ideal for industrial use</p>
+      <p>60%off</p>
+      <button onclick="addToCart('Fire Cylinder 2kg', 800)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/817fDTk7z3L._SX569_.jpg" alt="Fire Blanket">
+      <h2>Fire Blanket</h2>
+      <p>Essential for emergency situations Shelter Safety Cover for The Kitchen, Fireplace, Grill, Car, Camping | 2X2 Mtr | Pack of 1</p>
+      <p>70%off</p>
+      <button onclick="addToCart('Fire Blanket', 999)">Add to Cart</button>
+    </div>
+  </section>
+
+  <section class="products">
+  <div class="product">
+    <img src="https://5.imimg.com/data5/TS/CQ/MY-43727413/co2-fire-extinguisher-500x500.jpg" alt="Fire Cylinder 1kg">
+    <h2>Fire Cylinder co2 2kg</h2>
+    <p>Compact extinguisher for home & car</p>
+    <p>40%off</p>
+    <button onclick="addToCart('Fire Cylinder 1kg', 3000)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://image.made-in-china.com/202f0j00tGqbQITJOCci/5kg-6kg-Carbon-Steel-Big-Hose-Portable-CO2-Fire-Extinguisher.webp" alt="Fire Cylinder 2kg">
+    <h2>Fire Cylinder co2 6kg</h2>
+    <p>Suitable for Class B (flammable liquids like petrol, oil, paint) and Class C (electrical fires)</p>
+    <p>30%off</p>
+    <button onclick="addToCart('Fire Cylinder 2kg', 5000)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2022/10/NI/UF/MW/26192240/fire-alarms-500x500.jpg" alt="Fire Blanket">
+    <h2> Smoke Detector / Fire Alarm</h2>
+    <p>Battery-powered Bedrooms, hallways, offices</p>
+    <p>25%off</p>
+    <button onclick="addToCart('Fire Blanket', 	900)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/61gaOy2DvxL._AC_UF1000,1000_QL80_.jpg" alt="Fire Ball Extinguisher">
+    <h2>Fire Ball Extinguisher</h2>
+    <p>1.3 kg Auto-activated fire ball for instant response</p>
+    <p>30%off</p>
+    <button onclick="addToCart('Fire Ball Extinguisher',  710)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://m.media-amazon.com/images/I/81KXK3Tg+RL.jpg" alt="Smoke Detector">
+    <h2>Fire Safety Kit</h2>
+    <p>Fire Safety Kit (1 kg): This kit includes a 1 kg ABC powder fire extinguisher, a smoke detector, and a fire blanket.</p>
+    <p>50%off</p>
+    <button onclick="addToCart('Smoke Detector', 6159)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2022/7/QJ/GV/VI/10758391/hose-reel-500x500.jpg" alt="Fire Hose Reel">
+    <h2>Fire Hose Reel</h2>
+    <p>DARIT 30-Meter Swinging Type Wall Mounted Reel Drum with Gunmetal Nozzle
+
+Material: Thermoplastic hose with mild steel sideplates
+
+Features: 180° rotation, UV and abrasion resistance
+
+</p>
+    <p>45%off</p>
+    <button onclick="addToCart('Fire Hose Reel', 5800)">Add to Cart</button>
+  </div>
+</section>
+
+ <h2> Your safety is our priority. We offer a wide range of high-quality fire safety equipment designed to protect lives during emergencies</h2>
+<!--Fire Hydrant -->
+     <section class="products">
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/41Xrfxj3HFL.jpg" alt="Fire Hydrant Valve 63mm Single Way Landing Valve">
+      <h2>Fire Hydrant Valve 63mm Single Way Landing Valve</h2>
+      <p>SS Metal with Abs Cap and GI Chain (Pack of 1)</p>
+      <p>50%off</p>
+      <button onclick="addToCart('Fire Hydrant Valve 63mm Single Way Landing Valve',5100)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://m.media-amazon.com/images/I/61X4lc88s3L._SX569_.jpg" alt="Fire Cylinder 2kg">
+      <h2>Aaag Fire Hydrant Valve 63mm</h2>
+      <p> Gun Metal Single Way Landing Valve With Blank Cap and Gi Chain - Pack of 1</p>
+      <p>60%off</p>
+      <button onclick="addToCart('Aaag Fire Hydrant Valve 63mm', 3700)">Add to Cart</button>
+    </div>
+
+    <div class="product">
+      <img src="https://drownfire.in/wp-content/uploads/2024/05/newage-8-768x768.jpg" alt="Fire Blanket">
+      <h2>Buy Newage Double Headed Hydrant </h2>
+      <p>Gunmetal Double Headed Hydrant Valve (100mm Flanged Inlet)
+
+Material: Gunmetal (IS:318-LTB2)
+
+Inlet Size: 100mm NB Flanged
+
+Outlet Size: 63mm Female Instantaneous
+
+Price: Approximately ₹8,500</p>
+      <p>70%off</p>
+      <button onclick="addToCart('Buy Newage Double Headed Hydrant', 8500)">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- Cart Sidebar -->
+  <div id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="cart-total">Total: ₹0</p>
+    <button id="pay-btn" onclick="checkout()">Proceed to Payment</button>
+    <button id="close-cart" onclick="toggleCart()">Close</button>
+  </div>
+
+  <button id="pay-btn" onclick="checkout()">Proceed to Payment</button>
+<button id="close-cart" onclick="toggleCart()">Close</button>
+<button id="reset-cart" onclick="resetCart()">Reset Cart</button>
+<p class="purc">
+  🛒 Buy Fire Safety Products at Low Price & Wholesale Rates!
+  🛠️ Refilling Services Also Available at Best Prices!<br>
+  💰 Wholesale Fire Safety Products for Homes, Offices & Industries!<br>
+  Click on the below button!
+</p>
+
+<a href="buy.html"><button  class="buy-btn">Buy Now!</button></a>
+<div class="button-container">
+  <a href="contact.html" class="contact-button">Contact Us Now</a>
+</div>
+
+
+<script>
+  let cart = [];
+
+  // Load cart from localStorage on page load
+  window.onload = () => {
+    const savedCart = localStorage.getItem("fireCart");
+    if (savedCart) {
+      cart = JSON.parse(savedCart);
+      updateCart();
+    }
+  };
+
+  function saveCart() {
+    localStorage.setItem("fireCart", JSON.stringify(cart));
+  }
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    saveCart();
+    updateCart();
+    alert(`${name} added to cart`);
+  }
+
+  function updateCart() {
+    const cartList = document.getElementById('cart-items');
+    const cartCount = document.getElementById('cart-count');
+    const cartTotal = document.getElementById('cart-total');
+
+    cartList.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `<span>${item.name}</span><span>₹${item.price}</span>`;
+      cartList.appendChild(li);
+      total += item.price;
+    });
+
+    if (cartCount) {
+      cartCount.textContent = cart.length;
+    }
+
+    cartTotal.textContent = "Total: ₹" + total;
+  }
+
+  function toggleCart() {
+    const cartEl = document.getElementById("cart");
+    cartEl.style.display = (cartEl.style.display === "flex") ? "none" : "flex";
+  }
+
+ function checkout() {
+  if (cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  const totalAmount = cart.reduce((sum, item) => sum + item.price, 0);
+
+  const instructions = `
+Please make the payment offline using any UPI app.
+
+Amount: ₹${totalAmount}
+UPI ID: 6305693467@ybl
+
+📸 After payment, send a screenshot to our WhatsApp: 9573201047
+
+Thank you for shopping with Maruti Fire Safety!
+  `;
+
+  // Show popup and then redirect on OK
+  alert(instructions);
+
+  // Clear cart after message
+  cart = [];
+  saveCart();
+  updateCart();
+
+  // Redirect to the customer form
+  window.location.href = "buy.html"; // Change to your actual form page
+}
+
+  function resetCart() {
+    if (cart.length === 0) {
+      alert("Cart is already empty.");
+      return;
+    }
+
+    if (confirm("Are you sure you want to clear your cart?")) {
+      cart = [];
+      saveCart();
+      updateCart();
+      alert("Cart has been reset.");
+    }
+  }
+</script>
+
+
+</body>
+</html>
